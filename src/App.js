@@ -1,7 +1,11 @@
 import React from 'react';
 //import logo from './logo.svg';
 import './App.css';
-import ListItems from './ListItems.js'
+import ListItems from './ListItems.js';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import {fa-minus-circle} from '@fortawesome/free-solid-svg-icons';
+
+library.add(fa-minus-circle);
 
 class App extends React.Component {
   constructor(props){
@@ -27,7 +31,7 @@ class App extends React.Component {
   addItem(e){
     e.preventDefault();
     const newItem = this.state.currentItem;
-    console.log(newItem);
+    //console.log(newItem);
     if(newItem.text!==""){
       const newItems=[...this.state.items, newItem];
       this.setState({
@@ -43,7 +47,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <header>
-          <form id="to-do-form" onSubmit={this.addItems}>
+          <form id="to-do-form" onSubmit={this.addItem}>
               <input type="text" placeholder="Enter text"
               value={this.state.currentItem.text}
               onChange={this.handleInput}/>

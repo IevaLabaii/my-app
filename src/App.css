@@ -2,15 +2,29 @@ body {
   background-color: lightblue;
 }
 .App {
-  background-color: brown;
+  background-color: lightyellow;
+  margin: 40px auto;
+  min-height: 500px;
+  width: 400px;
 }
 #to-do-form input{
   margin: 20px;
-  padding: 10px;
-  background-color: rgb(214, 122, 127);
+  padding: 0 20px;
+  background-color: lightblue;
+  border-radius: 5px;
+  border: 0px;
+  width: 200px;
+  height: 30px;
 }
 #to-do-form button {
-  background-color: rgb(255, 255, 128);
+  background-color: #ffad33;
   cursor: pointer;
   font-weight: bold;
+  color: brown;
+  margin: 20px;
+  padding: 0 10px;
+  border-radius: 5px;
+  border: 0px;
+  height: 30px;
+  width: 50px;
 }
